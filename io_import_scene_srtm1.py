@@ -175,10 +175,10 @@ class ImportSrtm1(bpy.types.Operator, ImportHelper):
                         (minLat, minLon) = projection.toGeographic(bbox["xmin"], bbox["ymin"])
                         (maxLat, maxLon) = projection.toGeographic(bbox["xmax"], bbox["ymax"])
                 elif self.useSpecificExtent:
-                        minLat = self.minLat / 1000.0
-                        maxLat = self.maxLat / 1000.0
-                        minLon = self.minLon / 1000.0
-                        maxLon = self.maxLon / 1000.0
+                        minLat = self.minLat
+                        maxLat = self.maxLat
+                        minLon = self.minLon
+                        maxLon = self.maxLon
                 else:
                         # use extent of the self.filepath (a single .hgt file)
                         srtmFileName = os.path.basename(self.filepath)
