@@ -100,7 +100,7 @@ def getSelectionBoundingBox(context):
 
 class ImportSrtm3(bpy.types.Operator, ImportHelper):
         """Import digital elevation model data from files in the SRTM3 format (.hgt)"""
-        bl_idname = "import_scene.srtm"  # important since its how bpy.ops.import_scene.srtm is constructed
+        bl_idname = "import_scene.srtm3"  # important since its how bpy.ops.import_scene.srtm is constructed
         bl_label = "Import SRTM3"
         bl_options = {"UNDO","PRESET"}
 
